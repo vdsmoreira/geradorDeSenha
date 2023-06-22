@@ -28,11 +28,14 @@ passwordLengthElement.addEventListener("input", function() {
   generatePassword ()
 })
 
-//criando o evento de copiar a senha pelo botao
-const copyButtonELement = document.querySelector("#copy")
-copyButtonELement.addEventListener("click", function copy() {
+//criando o evento de copiar a senha pelo botao e icone
+
+function copy() {
   navigator.clipboard.writeText(inputElement.value)
-})
+}
+
+document.querySelector("#copy").addEventListener("click", copy)
+document.querySelector("#copy-icon").addEventListener("click", copy)
 
 generatePassword()
 
